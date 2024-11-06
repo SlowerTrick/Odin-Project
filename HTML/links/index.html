@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links and Images</title>
+    </head>
+    <body>
+        <h1>Homepage</h1>
+        <!-- 
+            Sempre parear o target com o rel especifiacado por questões de segurança 
+            target="_blank": Para direcionar para uma nova pagina, diferente da atual
+            rel="noopener noreferrer": Utilizado por motivos de segurança 
+        -->
+        <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+        
+        <!-- Colocar o ./ antes de links relativos para evitar possiveis erros -->
+        <p><a href="./pages/about.html">About</a></p>
+
+        <!-- O elemento "img" é vazio, ou seja, ele não deve ser fechado -->
+        <img src="https://www.theodinproject.com/mstile-310x310.png" width="100", height="100" alt="The Odin Project Logo">
+        <img src="./images/dog.jpg" width="100", height="150">
+    </body>
+</html>
