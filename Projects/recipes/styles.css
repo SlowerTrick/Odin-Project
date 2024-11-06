@@ -1,0 +1,20 @@
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,10,189,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+h1, h2{
+    color: white
+}
+
+p{
+    color: rgb(182, 192, 248)
+}
+
+ul{
+    color: rgb(4, 209, 245)
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
