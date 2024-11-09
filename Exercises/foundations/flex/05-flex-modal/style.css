@@ -35,6 +35,13 @@ body {
   justify-content: center;
 }
 
+.header{
+  display:flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: large;
+}
+
 .close-button {
   background: #eee;
   border-radius: 50%;
@@ -48,6 +55,7 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  margin: 0;
 }
 
 button {
@@ -66,4 +74,26 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.container{
+  display:flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.addons{
+  display:flex;
+  align-self: stretch;
+}
+
+.textButton{
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttons{
+  display:flex;
+  gap: 8px;
 }

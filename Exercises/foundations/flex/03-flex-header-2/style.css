@@ -12,6 +12,10 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .profile-image {
@@ -27,6 +31,17 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  margin-right: 0;
+}
+
+.logoLink{
+  display: flex;
+  gap: 20px;
+}
+
+.notfButton{
+  display: flex;
+  gap: 20px;
 }
 
 button {
@@ -45,4 +60,7 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
 }
