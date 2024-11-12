@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Roboto, Times, serif;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    margin: 0;
+}
+
+img {
+    width: 15%;
+    height: 15%;
+}
+
+p {
+    display: flex;
+    margin: 0;
+    color: #d2320a;
+    font-size: 1.2em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastPlayImg {
+    width: 20px;
+    height: 20px;
+}
+
+.header {
+    display: flex;
+    background-color: #8b1919;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.lastPlay {
+    display: flex;
+    padding-top: 10px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.score{
+    color: #d2320a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#score, #score1, #score2, #lastGame {
+    color: #d89123;
+}
+
+#lastGame {
+    font-size: 1.8em;
+}
