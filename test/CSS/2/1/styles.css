@@ -1,0 +1,37 @@
+body {
+    display: flex; /* Ativa o flexbox */
+    gap: 5px; /* Espaçamento entre os quadrados */
+    justify-content: center; /* Alinha os quadrados no centro horizontalmente */
+    align-items: center; /* Alinha os quadrados no centro verticalmente */
+    height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanho igual */
+    gap: 10px; /* Espaçamento opcional entre os quadrados */
+    width: max-content; /* Ajusta o contêiner ao tamanho dos quadrados */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: #555;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
