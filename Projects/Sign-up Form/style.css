@@ -1,0 +1,149 @@
+:root {
+    --main_image_size: 1;
+    --form_container_size: 1.5;
+    --form_primary_color: #1d2b3a;
+    --button_color: #77aae4;
+    --font_primary_color: white;
+    --font_secondary_color: #899098;
+    --password_input_color: #A52A2A;
+}
+
+@font-face {
+    font-family: 'Norce';
+    src: url('assets/Norse-Bold.otf');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.main_image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex: var(--main_image_size);
+    position: relative;
+}
+
+.main_image img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#logo {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    margin-top: 85px;
+    background: rgba(29, 43, 58, .5);
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 68px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 90px;
+    margin-right: 200px;
+}
+
+#logo p {
+    font-family: 'Norce','Courier New', Courier, monospace;
+    font-size: 5rem;
+    color: var(--font_primary_color);
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    flex: var(--form_container_size);
+    background-color: var(--form_primary_color);
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--form_primary_color);
+}
+
+h1 {
+    color: var(--font_primary_color);
+    font-size: 2.5rem;
+    margin-left: 75px;
+}
+
+form {
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+input {
+    width: 30%;
+    margin-bottom: 10%;
+    margin-right: 15%;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: var(--form_primary_color);
+    color: var(--font_primary_color);
+    font-size: .9rem;
+    border: none;
+    box-shadow: -1px 1px 3px black;
+}
+
+input#password:invalid, input#confirm_password:invalid {
+    border: 1px solid var(--password_input_color);
+    box-shadow: -1px 1px 3px var(--password_input_color);
+}
+
+input#password:focus, input#confirm_password:focus {
+    box-shadow: -1px 1px 3px black;
+    border: none;
+}
+
+input::placeholder {
+    color: var(--font_secondary_color);
+}
+
+.form div:last-child {
+    color: var(--font_secondary_color);
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.form div:last-child p {
+    display: inline-block;
+}
+
+.form div:last-child p:last-child {
+    color: var(--button_color);
+}
+
+button {
+    color: var(--font_primary_color);
+    background-color: var(--button_color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 60px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 3px 3px black;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: scale(0.85);
+}

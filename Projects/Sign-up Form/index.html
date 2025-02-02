@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main_image">
+        <img src="assets/main_image.jpg" alt="main_image">
+        <div id="logo">
+            <img src="assets/odin-lined.png" alt="logo" id="logo">
+            <p>ODIN</p>
+        </div>
+    </div>
+    <div class="form_container">
+        <div class="form">
+            <h1>Get Started</h1>
+            <form action="" method="post">
+                <div>
+                    <input type="text" name="first_name" id="first_name" placeholder="FIRST NAME" maxlength="16" required>
+                    <input type="text" name="last_name" id="last_name" placeholder="LAST NAME" maxlength="16" required>
+                    <input type="email" name="email" id="email" placeholder="E-MAIL" maxlength="40" required>
+                    <input type="tel" name="phone" id="phone" placeholder="PHONE" maxlength="11" pattern="[0-9]{2}[0-9]{9}" required>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" maxlength="16" minlength="8" required>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="CONFIRM PASSWORD" maxlength="16" minlength="8" required >
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <div>
+                <p>Already have an account..? </p>
+                <p>Log in</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
