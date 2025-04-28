@@ -1,0 +1,160 @@
+:root{
+    --primary_bg_color: #28282B;
+    --secondary_bg_color: #f8bf53;
+    --border_color: #222;
+    --text_color: #F9F6EE;
+    --button_border: #eab489;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,h2,h3,p {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.top_bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary_bg_color);
+    border-bottom: solid 2px var(--border_color);
+}
+
+button {
+    min-width: 100px;
+    min-height: 50px;
+    background-color: var(--secondary_bg_color);
+    border-radius: 30px;
+    border-color: var(--button_border);
+    color: var(--text_color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: scale(0.85);
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background: 
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* camada transparente */
+      url('https://www.pokemon-cafe.jp/common/img/main03_01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home_container {
+    height: 520px;
+    width: 600px;
+    background: linear-gradient(rgba(40, 40, 43, 0.5));
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_container h1 {
+    color: var(--text_color);
+    margin: 0;
+}
+
+.menu_container {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 2rem;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(40, 40, 43, 0.5));
+}
+
+.menu_item {
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(rgba(40, 40, 43, 0.5));
+    border-radius: 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu_item:hover {
+    transform: scale(0.95);
+}
+
+.menu_item h1 {
+    color: var(--text_color);
+    margin: 0;
+}
+
+.contact_container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 2rem;  
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(40, 40, 43, 0.5));
+}
+
+.contact_container h1 {
+    color: var(--text_color);
+    text-align: center;
+    margin: 0;
+}
+
+.contact_container img {
+    border-radius: 20px;
+}
+
+footer {
+    width: 100%;
+    padding: 0.1rem;
+    background-color: var(--primary_bg_color);
+    border-top: solid 2px var(--border_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text_color);
+}
