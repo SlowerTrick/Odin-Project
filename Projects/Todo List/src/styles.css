@@ -1,0 +1,257 @@
+:root {
+    --bg_color_primary: #28282B;
+    --bg_color_secondary: #f7f7f7;
+    --bg_color_tertiary: #ddd;
+    --font_color_primary: #28282B;
+    --font_color_secondary: #f44336;;
+    --border_color: #b9b9b9;
+    --check_box_color: #f7f7f7;
+}
+
+html,
+body,
+p {
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+h1, p {
+    font-family: "Roboto", sans-serif;
+    color: var(--font_color_primary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 8fr;
+    height: 100%;
+    grid-template-areas: 
+        "top_bar top_bar"
+        "side_bar content"
+    ;
+}
+
+.top_bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg_color_primary);
+    grid-area: top_bar;
+    padding-left: 1.5rem;
+}
+
+.side_bar {
+    grid-area: side_bar;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg_color_secondary);
+    border-right: 1px solid var(--border_color);
+}
+
+.side_bar_item {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.side_bar_item:hover h1, .delete_todo:hover, .new_todo p, .details_button:hover {
+    transform: scale(0.95);
+    color: var(--font_color_secondary);
+}
+
+.side_bar_item:active h1, .delete_todo:active, .new_todo p, .details_button:active {
+    transform: scale(0.85);
+}
+
+.side_bar_item::before {
+    margin-left: auto;
+}
+
+.side_bar_item::after, .side_bar_item::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--font_color_secondary);
+    display: block;
+    transition: 0.5s;
+}
+
+.side_bar_item:hover::after, .side_bar_item:hover::before {
+    width: 100%;
+}
+
+.content {
+    grid-area: content;
+    background-color: var(--bg_color_secondary);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 0.5rem;
+}
+
+.content_container {
+    display: flex;
+    background-color: var(--bg_color_tertiary);
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.priority_container, .date_container {
+    display: flex;
+    gap: .5rem;
+}
+
+.priority_high {
+    border-left: 0.3rem solid red;
+}
+
+.priority_medium {
+    border-left: 0.3rem solid yellow;
+}
+
+.priority_low {
+    border-left: 0.3rem solid green;
+}
+
+.check_box_unchecked,
+.check_box_checked {
+    margin-right: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 3px;
+    border: 3px solid var(--check_box_color);
+}
+
+.check_box_checked {
+    background: url("https://static.stands4.com/images/symbol/1/2320_check-mark.png"), var(--check_box_color);
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.new_todo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.new_todo {
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--bg_color_primary);
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.new_todo p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--check_box_color);
+}
+
+.todo_title {
+    margin-right: auto;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.details_button {
+    margin-right: 1.5rem;
+    padding: .2rem .5rem;
+    border: 1px solid var(--bg_color_primary);
+    border-radius: 3px;
+    font-size: 1rem;
+    color: var(--bg_color_primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.details_container {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bg_color_primary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.details_container p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    color: var(--bg_color_secondary);
+}
+
+.todo_date {
+    display: flex;
+    align-items: center;
+}
+
+.todo_form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg_color_tertiary);
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add_button, .cancel_button {
+    width: 70px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.delete_todo {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: scale(0.85);
+}
+
+.add_button {
+    background-color: #2abd67;
+}
+
+.cancel_button {
+    background-color: #be0404;
+}
