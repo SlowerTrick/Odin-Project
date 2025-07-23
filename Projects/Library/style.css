@@ -64,3 +64,10 @@ h3{
 .submit_form_button:active {
     transform: scale(0.85);
 }
+
+.validation_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+}
