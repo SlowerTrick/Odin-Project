@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,3 +16,24 @@
     </div>
   </body>
 </html>
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="id1" type="number" min="100" max="300" required>
+        <button onclick="myFunction()">OK</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+                const inpObj = document.getElementById("id1");
+                if (!inpObj.checkValidity()) {
+                    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+                }
+            }
+        </script>
+    </body>
+</html>
+>>>>>>> d132bba1279365fbaebd067b0bffb5f80225ef4a

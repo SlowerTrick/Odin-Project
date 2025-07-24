@@ -54,18 +54,30 @@ function display_books_library(library, books_container)
 }
 
 const library = [];
-let books_container = document.querySelector('.books_container');
+const books_container = document.querySelector('.books_container');
+const validation_status = document.querySelector('.validation_status');
 
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let title = document.querySelector('#book_title').value;
-    let author = document.querySelector('#book_author').value;
-    let pages = document.querySelector('#book_pages').value;
-    let read = document.querySelector('#book_read').checked;
+    let title = document.querySelector('#book_title');
+    let author = document.querySelector('#book_author');
+    let pages = document.querySelector('#book_pages');
+    let read = document.querySelector('#book_read');
 
-    let book = new Book(title, author, pages, read);
-    add_book_library(library, book);
-    console.clear();
-    display_books_library(library, books_container);
+    if(!title.checkValidity())
+        validation_status.innerText = title.validationMessage;
+    else if(!author.checkValidity())
+        validation_status.innerText = author.validationMessage;
+    else if(!pages.checkValidity())
+        validation_status.innerText = pages.validationMessage;
+    else if(!read.checkValidity())
+        validation_status.innerText = read.validationMessage;
+    else
+    {
+        let book = new Book(title.value, author.value, pages.value, read.value);
+        add_book_library(library, book);
+        console.clear();
+        display_books_library(library, books_container);
+    }
 });
