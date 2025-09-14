@@ -1,0 +1,55 @@
+:root {
+    --bg_color_primary: cornflowerblue;
+    --font_color: #f7f7f7;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--bg_color_primary);
+    color: var(--font_color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.info p {
+    margin: 0;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+button {
+    width: 5rem;
+    height: 1.7rem;
+    color: var(--font_color);
+    font-weight: bold;
+    background-color: var(--bg_color_primary);
+    border: none;
+    border-radius: 1rem;
+}
