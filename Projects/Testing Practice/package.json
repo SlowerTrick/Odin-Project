@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test1": "jest capitalize"
+    "test1": "jest capitalize",
+    "test2": "jest reverseString",
+    "test3": "jest calculator",
+    "test4": "jest caesarCipher",
+    "test5": "jest analyzeArray"
   },
   "keywords": [],
   "author": "",
