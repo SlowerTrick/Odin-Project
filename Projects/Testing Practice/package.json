@@ -7,7 +7,7 @@
     "test1": "jest capitalize",
     "test2": "jest reverseString",
     "test3": "jest calculator",
-    "test4": "jest caesarCipher",
+    "test4": "jest caesar",
     "test5": "jest analyzeArray"
   },
   "keywords": [],
