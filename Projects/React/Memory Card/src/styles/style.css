@@ -1,0 +1,57 @@
+/* General setup */
+:root {
+    --bg-color: #181818;
+    --font-color: #e5e7eb;
+    --tiny-padding-size: 16px;
+    --padding-size: 32px;
+    --tiny-gap-size: 8px;
+    --gap-size: 16px;
+    --card-bg: #0003;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    padding: var(--padding-size);
+    color: var(--font-color);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Difficulty container */
+.difficulty-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--gap-size);
+}
+
+/* Deck container */
+.deck-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card setup */
+.card {
+    height: 250px;
+    width: 180px;
+    background-color: var(--card-bg);
+    padding: var(--tiny-padding-size);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--tiny-gap-size);
+}
+
+.card-image {
+}
+
+.card-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+
