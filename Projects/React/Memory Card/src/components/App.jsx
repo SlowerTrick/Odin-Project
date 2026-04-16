@@ -1,56 +1,96 @@
-import { useEffect, useState } from 'react';
-import RandomPokemon from '../functions/Pokemon'
-import Difficulty from './Difficulty';
-import Deck from './Deck';
+import { useState } from "react";
+import DifficultySelector from "./DifficultySelector";
+import Deck from "./Deck";
+import Score from "./Score"
+import EndScreen from "./EndScreen";
+import createPokemonDeck from "../hooks/createPokemonDeck";
 
 export default function App() {
-    const [list, setList] = useState([]);
+    const SCREENS = {
+        DEFAULT: "DEFAULT",
+        PLAYING: "PLAYING",
+        VICTORY: "VICTORY",
+        DEFEAT: "DEFEAT"
+    };
+
     const [deckSize, setDeckSize] = useState(0);
-    const [loading, setLoading] = useState(false); // Api protection
+    const [bestScore, setBestScore] = useState(0);
+    const [currentScore, setCurrentScore] = useState(0);
+    const [screen, setScreen] = useState(SCREENS.DEFAULT);
+    const [reloadDeck, setReloadDeck] = useState(0);
 
-    function handleInput(value) {
-        if (loading) return;
+    const { deck, loading } = createPokemonDeck(deckSize, reloadDeck);
 
-        setDeckSize(value);
+
+    function handleOnHit() {
+        const nextValue = currentScore + 1;
+        setCurrentScore(nextValue);
+
+        if(nextValue == deckSize) {
+            setScreen(SCREENS.VICTORY);
+        }
     }
 
-    useEffect(() => {
-        async function fetchPokemon() {
-            try {
-                setLoading(true);
+    function handleFinalScore(value) {
+        setBestScore(prev => value > prev ? value : prev);
+        setCurrentScore(0);
 
-                const usedNames = new Set();
-                const pokemons = [];
-
-                while (pokemons.length < deckSize) {
-                    const data = await RandomPokemon();
-
-                    if (!usedNames.has(data.name)) {
-                        usedNames.add(data.name);
-                        pokemons.push(data);
-                    }
-                }
-
-                setList(pokemons);
-            }
-            catch (e) {
-                console.log(e);
-            }
-            finally {
-                setLoading(false);
-            }
+        if(screen != "Victory") {
+            setScreen(SCREENS.DEFEAT);
         }
-        if (deckSize > 0) {
-            fetchPokemon();
-        }
-    }, [deckSize]);
+        setDeckSize(deckSize);
+    }
 
-    return(
+    function handleSelectDifficulty(value) {
+        setDeckSize(value);
+        setScreen(SCREENS.PLAYING);
+    }
+
+    function restartGame() {
+        handleFinalScore(currentScore);
+        setReloadDeck(prev => !prev);
+        setScreen(SCREENS.DEFAULT);
+    }
+
+    return (
         <>
-            <Difficulty handleInput={handleInput}/>
-            {list.length > 0 && (
-                <Deck cards={list} />
+            {screen === SCREENS.DEFAULT && (
+                <div className="difficulty-container">
+                    <DifficultySelector onSelectDifficulty={handleSelectDifficulty} />
+                </div>
+            )}
+
+            {loading && screen !== SCREENS.DEFAULT && <p className="loading">Loading...</p>}
+
+            {screen === SCREENS.PLAYING && !loading && (
+                <>
+                    <Score
+                        score={currentScore}
+                        best={bestScore}
+                        total={deckSize}
+                    />
+
+                    <Deck
+                        cards={deck}
+                        onHit={handleOnHit}
+                        onMiss={handleFinalScore}
+                    />
+                </>
+            )}
+
+            {screen === SCREENS.DEFEAT && (
+                <EndScreen
+                    message="Game Over!"
+                    onRestart={restartGame}
+                />
+            )}
+
+            {screen === SCREENS.VICTORY && (
+                <EndScreen
+                    message="You Win!"
+                    onRestart={restartGame}
+                />
             )}
         </>
-    )
+    );
 }
