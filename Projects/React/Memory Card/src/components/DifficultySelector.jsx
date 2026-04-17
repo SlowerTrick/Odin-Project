@@ -1,13 +1,9 @@
-export default function DifficultySelector({ onSelectDifficulty }) {
-    const difficulties = {
-        Easy: 5,
-        Medium: 10,
-        Hard: 18
-    };
+import { DIFFICULTIES } from "../functions/Constants";
 
+export default function DifficultySelector({ onSelectDifficulty }) {
     return (
         <div className="difficulty-options">
-            {Object.entries(difficulties).map(([label, value]) => (
+            {Object.entries(DIFFICULTIES).map(([label, value]) => (
                 <button
                     key={label}
                     onClick={() => onSelectDifficulty(value)}

@@ -1,5 +1,6 @@
 export default async function RandomPokemon() {
-    const randomId = Math.floor(Math.random() * 151) + 1; // Generating a Kanto pokemon (Generation 1)
+    // const randomId = Math.floor(Math.random() * 151) + 1; // Generating a Kanto pokemon (Generation 1)
+    const randomId = Math.floor(Math.random() * 1025) + 1; // Genenrating all
     const URL = `https://pokeapi.co/api/v2/pokemon/${randomId}`;
 
     const response = await fetch(URL);

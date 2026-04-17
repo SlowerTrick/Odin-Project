@@ -3,21 +3,17 @@ import DifficultySelector from "./DifficultySelector";
 import Deck from "./Deck";
 import Score from "./Score"
 import EndScreen from "./EndScreen";
+import { SCREENS } from "../functions/Constants";
 import createPokemonDeck from "../hooks/createPokemonDeck";
+import Background from "./Background";
+import Logo from "./Logo";
 
 export default function App() {
-    const SCREENS = {
-        DEFAULT: "DEFAULT",
-        PLAYING: "PLAYING",
-        VICTORY: "VICTORY",
-        DEFEAT: "DEFEAT"
-    };
-
     const [deckSize, setDeckSize] = useState(0);
     const [bestScore, setBestScore] = useState(0);
     const [currentScore, setCurrentScore] = useState(0);
     const [screen, setScreen] = useState(SCREENS.DEFAULT);
-    const [reloadDeck, setReloadDeck] = useState(0);
+    const [reloadDeck, setReloadDeck] = useState(false);
 
     const { deck, loading } = createPokemonDeck(deckSize, reloadDeck);
 
@@ -35,7 +31,7 @@ export default function App() {
         setBestScore(prev => value > prev ? value : prev);
         setCurrentScore(0);
 
-        if(screen != "Victory") {
+        if(screen != SCREENS.VICTORY) {
             setScreen(SCREENS.DEFEAT);
         }
         setDeckSize(deckSize);
@@ -54,9 +50,14 @@ export default function App() {
 
     return (
         <>
+            <Background />
             {screen === SCREENS.DEFAULT && (
-                <div className="difficulty-container">
-                    <DifficultySelector onSelectDifficulty={handleSelectDifficulty} />
+                <div className="start-page">
+                    <Logo />
+                    <h1 className="title-text">Memory Game</h1>
+                    <div className="difficulty-container">
+                        <DifficultySelector onSelectDifficulty={handleSelectDifficulty} />
+                    </div>
                 </div>
             )}
 
