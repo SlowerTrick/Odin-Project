@@ -3,6 +3,15 @@ Repository whose main objective is to store all my knowledge obtained thanks to 
 
 ## Projects Portfolio
 
+### React Projects
+
+| Project | Description | Link |
+|--------|------------|------|
+| CV Application | Resume builder using React | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/CV%20Application) |
+| Memory Card | Memory game with dynamic state management | [View](https://github.com/Artur-SLO/Memory-Card) |
+
+---
+
 ### JavaScript Projects
 
 | Project | Description | Link |
@@ -18,15 +27,6 @@ Repository whose main objective is to store all my knowledge obtained thanks to 
 | Tic Tac Toe | Interactive tic tac toe game | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/JS/Project:%20Tic%20Tac%20Toe) |
 | Recursion | Recursive problem solving exercises | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/JS/Recursion) |
 | Rock Paper Scissors | Classic game against computer | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/JS/Rock-Paper-Scissor) |
-
----
-
-### React Projects
-
-| Project | Description | Link |
-|--------|------------|------|
-| CV Application | Resume builder using React | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/CV%20Application) |
-| Memory Card | Memory game with dynamic state management | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/Memory%20Card) |
 
 ---
 
@@ -54,7 +54,7 @@ Repository whose main objective is to store all my knowledge obtained thanks to 
 
 ---
 
-### 📦 Webpack Projects
+###  Webpack Projects
 
 | Project | Description | Link |
 |--------|------------|------|
