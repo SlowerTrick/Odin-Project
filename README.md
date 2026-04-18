@@ -5,10 +5,10 @@ Repository whose main objective is to store all my knowledge obtained thanks to 
 
 ### React Projects
 
-| Project | Description | Link |
-|--------|------------|------|
-| CV Application | Resume builder using React | [View](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/CV%20Application) |
-| Memory Card | Memory game with dynamic state management | [View](https://github.com/Artur-SLO/Memory-Card) |
+| Project | Description | Code | Preview |
+|--------|------------|------|---------|
+| CV Application | Resume builder using React | [Src](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/CV%20Application) | [Live](https://cv-application-seven-lyart.vercel.app/) |
+| Memory Card | Memory game with dynamic state management | [Src](https://github.com/Artur-SLO/Memory-Card) | Coming soon |
 
 ---
 
