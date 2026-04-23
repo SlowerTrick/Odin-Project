@@ -7,6 +7,7 @@ export default function DifficultySelector({ onSelectDifficulty }) {
                 <button
                     key={label}
                     onClick={() => onSelectDifficulty(value)}
+                    className="difficulty-button"
                 >
                     {label}
                 </button>

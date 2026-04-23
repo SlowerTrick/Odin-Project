@@ -1,11 +1,18 @@
+/* Font imports */
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 /* General setup */
 :root {
     --bg-color: #131519;
     --font-color: #e5e7eb;
+    --title-font-color: #ffcc00;
+    --title-shadow-color: #1f5cab;
     --tiny-padding-size: 16px;
     --padding-size: 32px;
+    --big-padding-size: 64px;
     --tiny-gap-size: 8px;
     --gap-size: 16px;
+    --big-gap-size: 32px;
     --card-bg: #0003;
 }
 
@@ -13,77 +20,20 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--bg-color);
-    padding: var(--padding-size);
+    padding-left: var(--big-padding-size);
+    padding-right: var(--big-padding-size);
+    padding-bottom: var(--big-padding-size);
     color: var(--font-color);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
-/* Difficulty container */
-.difficulty-container {
+.app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: var(--gap-size);
-}
-
-/* Deck container */
-.deck-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Loading */
-.loading {
-    display: flex;
-    justify-content: center;
-}
-
-/* Card setup */
-.card {
-    height: 250px;
-    width: 180px;
-    background-color: var(--card-bg);
-    padding: var(--tiny-padding-size);
-    border: 1px solid var(--font-color);
-    border-radius: var(--tiny-padding-size);
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--tiny-gap-size);
-}
-
-.card-name {
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Scoreboard */
-
-.scoreboard {
-    display: flex;
-    flex-direction: column;
-    gap: var(--tiny-gap-size);
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--gap-size);
-}
-
-/* Victory Screen */
-
-.end-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--tiny-gap-size);
+    height: 100vh;
 }
 
 /* Background video */
-
 .background-video {
     object-fit: cover;
     position: fixed;
@@ -96,6 +46,313 @@ body {
 }
 
 /* StartPage */
-
 .start-page { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    gap: var(--big-gap-size);
 }
+
+.start-text {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-left: 40px;
+    color: var(--title-font-color);
+    letter-spacing: 4px;
+    text-shadow:
+    -5px -5px 0 var(--title-shadow-color),
+    5px -5px 0 var(--title-shadow-color),
+    -5px  5px 0 var(--title-shadow-color),
+    5px  5px 0 var(--title-shadow-color);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    align-self: center;
+    width: 400px;
+}
+
+.big-logo {
+    align-self: center;
+    width: 600px;
+    margin-bottom: -70px;
+}
+
+.difficulty-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-size)
+}
+
+.difficulty-button {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 1.8rem;
+
+    color: var(--title-font-color);
+    background-color: var(--title-shadow-color);
+
+    border: 0;
+    border-radius: var(--tiny-padding-size);
+    padding: var(--tiny-padding-size);
+}
+
+.deck-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    color: var(--title-font-color);
+}
+
+/* Game setup */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--big-gap-size);
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.game-header-text {
+    font-family: 'Pokemon Solid', sans-serif;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: -48px;
+    margin-left: 16px;
+    color: var(--title-font-color);
+    letter-spacing: 4px;
+    text-shadow:
+    -5px -5px 0 var(--title-shadow-color),
+    5px -5px 0 var(--title-shadow-color),
+    -5px  5px 0 var(--title-shadow-color),
+    5px  5px 0 var(--title-shadow-color);
+}
+
+/* Card setup */
+.card-container {
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 180px;
+    height: 250px;
+
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 250px;
+    width: 180px;
+    background-color: var(--card-bg);
+    padding: var(--tiny-padding-size);
+    border: 1px solid var(--font-color);
+    border-radius: var(--tiny-padding-size);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card-name {
+
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-font-color);
+    letter-spacing: 4px;
+    text-shadow:
+    -2px -2px 0 var(--title-shadow-color),
+    2px -2px 0 var(--title-shadow-color),
+    -2px  2px 0 var(--title-shadow-color),
+    2px  2px 0 var(--title-shadow-color);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backface-visibility: hidden;
+}
+
+.card-inner.flipped .card {
+    transform: none;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    border-radius: var(--tiny-padding-size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--tiny-padding-size);
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tiny-gap-size);
+    margin-left: auto;
+
+    background-color: var(--title-shadow-color);
+    height: fit-content;
+    padding: var(--tiny-padding-size);
+
+    color: var(--title-font-color);
+    box-shadow: 0 3px 15px var(--title-font-color),0 -3px 15px var(--title-font-color);
+    border-radius: var(--tiny-padding-size);
+
+}
+
+/* Footer */
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--padding-size);
+    padding-right: var(--padding-size);
+    padding-bottom: var(--padding-size);
+}
+
+.footer-button-container {
+    display: flex;
+    gap: var(--tiny-gap-size);
+}
+.footer-button {
+    height: 30px;
+    width: 30px;
+    background-color: var(--title-shadow-color);
+    border: 0;
+    border-radius: var(--big-padding-size);
+}
+
+.footer-button svg {
+    fill: var(--title-font-color);
+}
+
+
+/* Modal */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-size);
+    width: 400px;
+
+
+    background-color: var(--title-shadow-color);
+    padding: var(--padding-size);
+    border: 3px solid var(--title-font-color);
+    border-radius: var(--padding-size);
+
+    box-shadow: 0 3px 15px var(--title-font-color),0 -3px 15px var(--title-font-color);
+}
+
+.modal-button {
+    background-color: var(--title-font-color);
+    color: var(--font-color)
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+.animated-button, .difficulty-button, .logo-container, .scoreboard {
+    transition: transform 0.2s ease-in-out;
+}
+
+.animated-button:hover, .difficulty-button:hover, .logo-container:hover, .scoreboard:hover{
+    transform: scale(1.1);
+}
+
+.animated-button:active, .difficulty-button:active {
+    transform: scale(0.9);
+}
+
+.modal, .start-page, .game-page, .foot {
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
