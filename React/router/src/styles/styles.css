@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #f5f5f5;
+}
+
+h1, h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.fade-in {
+    animation: fade-in 0.6s ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    background: #1a1a1a;
+    border-bottom: 1px solid #2f2f2f;
+    padding: 14px 32px;
+}
+
+/* Lista */
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    list-style: none;
+}
+
+/* Links */
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 10px 18px;
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+/* Hover */
+nav ul li a:hover {
+    background: #2d2d2d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Link ativo */
+nav ul li a.active {
+    background: #ffffff;
+    color: #111;
+}
