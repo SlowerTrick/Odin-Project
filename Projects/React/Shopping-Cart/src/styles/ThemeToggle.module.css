@@ -1,0 +1,32 @@
+.themeToggleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+
+    padding: var(--space-2);
+    border-radius: var(--space-2);
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.themeToggleContainer:hover {
+    background-color: var(--color-primary);
+    opacity: 0.9;
+}
+
+.themeToggleContainer img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.2s ease-in-out;
+}
+
+.themeToggleContainer:hover img {
+    filter: brightness(0) invert(1);
+}
+
+:root[data-theme="dark"] .themeToggleContainer:not(:hover) img {
+    filter: brightness(0) invert(1);
+}
