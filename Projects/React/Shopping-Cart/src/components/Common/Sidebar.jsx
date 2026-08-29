@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 export default function Sidebar() {
     const [isCollapsed, setIsCollapsed] = useState(false)
-
+ 
     const toggleSidebar = () => {
         setIsCollapsed(!isCollapsed);
     };

@@ -1,8 +1,11 @@
+import PageWrapper from "../Common/PageWrapper"
+import Title from "../Common/Title"
+
 export default function Cart() {
     return (
-        <div>
-            <h1>Cart Page</h1>
-        </div>
+        <PageWrapper >
+            <Title text="Cart Page"/>
+        </PageWrapper>
     )
 }
 

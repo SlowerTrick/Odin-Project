@@ -1,8 +1,11 @@
+import PageWrapper from "../Common/PageWrapper"
+import Title from "../Common/Title"
+
 export default function Home() {
     return (
-        <div>
-            <h1>Home Page</h1>
-        </div>
+        <PageWrapper>
+            <Title text="Home Page"/>
+        </PageWrapper>
     )
 }
 

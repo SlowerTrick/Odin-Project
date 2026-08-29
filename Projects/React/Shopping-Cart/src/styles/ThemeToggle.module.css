@@ -4,23 +4,30 @@
     justify-content: center;
     margin-top: auto;
 
-    padding: var(--space-2);
-    border-radius: var(--space-2);
+    padding: var(--size-4);
+    border-radius: var(--radius-normal);
 
     cursor: pointer;
+    user-select: none;
 
-    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition: var(--transition-standard);
 }
 
 .themeToggleContainer:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent-primary);
     opacity: 0.9;
+    transform: var(--lift-subtle);
+    box-shadow: var(--shadow-hover);
+}
+
+.themeToggleContainer:active {
+    transform: var(--scale-active);
 }
 
 .themeToggleContainer img {
-    width: 24px;
-    height: 24px;
-    transition: filter 0.2s ease-in-out;
+    width: var(--size-6);
+    height: var(--size-6);
+    transition: filter var(--duration-normal) var(--ease-standard);
 }
 
 .themeToggleContainer:hover img {
