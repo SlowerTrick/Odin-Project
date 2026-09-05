@@ -1,0 +1,15 @@
+.appContainer {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    padding: var(--size-5);
+
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+
+    gap: var(--size-4);
+
+    font-family: sans-serif;
+}
