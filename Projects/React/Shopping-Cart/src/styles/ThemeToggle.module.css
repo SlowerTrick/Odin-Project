@@ -13,6 +13,14 @@
     transition: var(--transition-standard);
 }
 
+.themeToggleContainer.collapsed {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: auto auto 0 auto;
+    flex-shrink: 0;
+}
+
 .themeToggleContainer:hover {
     background-color: var(--color-accent-primary);
     opacity: 0.9;
@@ -27,7 +35,12 @@
 .themeToggleContainer img {
     width: var(--size-6);
     height: var(--size-6);
-    transition: filter var(--duration-normal) var(--ease-standard);
+    max-width: var(--size-6);
+    max-height: var(--size-6);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform var(--duration-slow) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .themeToggleContainer:hover img {

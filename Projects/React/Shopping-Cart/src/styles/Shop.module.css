@@ -1,9 +1,151 @@
-/* Layout */
+/* Header */
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border-primary);
+    padding-bottom: var(--size-4);
+    margin-bottom: var(--size-5);
+    width: 100%;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    gap: var(--size-3);
+}
+
+.shopHeading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.shopSubheading {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    margin-top: var(--size-1);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--size-2);
+}
+
+.clearFilterBtn {
+    background: transparent;
+    border: none;
+    color: var(--color-accent-primary);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    padding: 0;
+}
+
+/* Shop Search Bar */
+.shopSearchWrapper {
+    min-width: 260px;
+    max-width: 380px;
+    flex: 1;
+}
+
+@media (max-width: 680px) {
+    .shopSearchWrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.shopSearchContainer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-normal);
+    padding: var(--size-2) var(--size-3);
+    gap: var(--size-2);
+    transition: var(--transition-standard);
+}
+
+.shopSearchContainer:focus-within {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.searchIcon {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.shopSearchInput {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+}
+
+.shopSearchInput:focus {
+    outline: none;
+}
+
+.shopSearchInput::placeholder {
+    color: var(--color-text-muted);
+    opacity: 0.8;
+}
+
+.clearSearchBtn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 0 2px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-standard);
+}
+
+.clearSearchBtn:hover {
+    color: var(--color-accent-primary);
+}
+
+
+.noResultsBox {
+    text-align: center;
+    padding: var(--size-7) var(--size-5);
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-normal);
+    width: 100%;
+    max-width: 600px;
+    margin: var(--size-6) auto;
+    color: var(--color-text-primary);
+}
+
+
 .cardWrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--size-5);
+    width: 100%;
+    max-width: 1100px;
 }
+
+@media (max-width: 900px) {
+    .cardWrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cardWrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 .cardContainer {
     display: flex;
@@ -18,15 +160,6 @@
     cursor: pointer;
 }
 
-.cardContainer:hover {
-    transform: var(--lift-subtle);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--color-accent-primary);
-}
-
-.cardContainer:active {
-    transform: var(--scale-active);
-}
 
 .image {
     width: var(--size-9);
@@ -39,7 +172,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--size-2);
+    gap: var(--size-4);
     text-align: center;
     color: var(--color-text-primary);
     width: 100%;
@@ -68,6 +201,215 @@
     justify-content: center;
     gap: var(--size-4);
     margin-top: var(--size-6);
+    margin-top: auto;
+    padding-top: var(--size-6);
+}
+
+/* Modal */
+.modalBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.modalContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--size-11);
+    max-width: 70vw;
+    padding: var(--size-5);
+    background-color: var(--color-modal-bg);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-standard);
+    transition: var(--transition-standard);
+    animation: slideIn var(--duration-slow) var(--ease-bounce) forwards;
+}
+
+.modalContainer.closing {
+    animation: fadeOut var(--duration-normal) var(--ease-standard) forwards;
+}
+
+.modalInfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--size-4);
+}
+
+.modalCategory {
+    color: var(--color-accent-primary);
+    margin-bottom: -10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.modalDescription {
+    height: 100px;
+    overflow: auto;
+    width: 90%;
+}
+
+.modalImage {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    justify-self: center;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--size-5);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    padding-bottom: var(--size-4);
+    width: 90%;
+}
+
+.modalPrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.modalDiscount {
+    font-size: 0.9rem;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.modalBuyers {
+    font-size: 0.9rem;
+    color: var(--color-accent-primary);
+    margin-left: auto;
+    font-weight: 600;
+}
+
+.modalPurchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-4);
+    width: 90%;
+}
+
+.modalQuantity {
+    display: flex;
+    margin-top: var(--size-4);
+    border: 2px solid var(--color-accent-primary);
+    border-radius: var(--radius-small);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: var(--transition-standard);
+}
+
+.modalButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-5);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    border: none;
+    transition: var(--transition-standard);
+}
+
+.modalInput {
+    text-align: center;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    border: none;
+}
+
+.modalAddToCart {
+    text-transform: uppercase;
+    width: 90%;
+    margin-top: var(--size-4);
+    background-color: var(--color-bg-primary);
+    border: solid 2px var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    font-weight: bold;
+    padding: var(--size-2);
+    border-radius: var(--radius-large);
+    transition: var(--transition-standard);
+}
+
+button.modalAddToCart {
+    border: 2px solid var(--color-accent-primary);
+    padding: var(--size-1);
+}
+
+/* Hide arrows for Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide arrows for Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.cardContainer:hover,
+.modalAddToCart:hover,
+.modalQuantity:hover {
+    transform: var(--lift-subtle);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent-primary);
+}
+
+.cardContainer:active {
+    transform: var(--scale-active);
+}
+
+.modalButton:hover {
+    background-color: var(--color-accent-primary);
+}
+
+.modalInput:focus,
+.modalInput:focus-visible,
+.modalInput:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}

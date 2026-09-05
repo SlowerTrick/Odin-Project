@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function usePageManager({ products = [], pageSize = 6 }) {
+export default function usePaginationManager({ products = [], pageSize = 6 }) {
     const [currentPage, setCurrentPage] = useState(1);
 
     const totalPages = Math.ceil(products.length / pageSize) || 1;
