@@ -1,6 +1,6 @@
 import React from 'react';
-import { LayersIcon, CodeBracketIcon, TerminalIcon, GithubIcon } from './Icons';
-import { REPO_BASE_URL } from '../data/projects';
+import { LayersIcon, CodeBracketIcon, TerminalIcon, GithubIcon, LinkedinIcon } from './Icons';
+import { REPO_BASE_URL, LINKEDIN_URL } from '../data/projects';
 import styles from '../styles/Hero.module.css';
 
 export const Hero: React.FC = () => {
@@ -8,21 +8,32 @@ export const Hero: React.FC = () => {
         <section id="hero" className={styles.heroSection}>
             <div className={styles.heroBadge}>
                 <span className={styles.badgePulse}></span>
-                <span>Frontend Engineering & Interactive Applications</span>
+                <span>Computer Science @ UFES · Web Developer @ LabES</span>
             </div>
 
             <h1 className={styles.heroTitle}>
-                Web Development <span className={styles.heroTitleAccent}>Portfolio</span>
+                Artur Vítor <span className={styles.heroTitleAccent}>Portfolio</span>
             </h1>
 
             <p className={styles.heroSubtitle}>
-                A hands-on collection of frontend applications documenting practical mastery of 
-                React 19, TypeScript, state management, asynchronous APIs, and automated CI/CD deployments.
+                Computer Science undergraduate at UFES and Web Developer apprentice at LabES. 
+                Experienced in enterprise systems (Marvin with Java and Jakarta EE), AI study platforms 
+                (Studex with RAG and local LLMs), computer vision (Face Recognition with WebSockets), 
+                and modern interactive web applications.
             </p>
 
             <div className={styles.heroActions}>
                 <a href="#projects" className={`btn btnPrimary ${styles.primaryCta}`}>
                     View Projects
+                </a>
+                <a 
+                    href={LINKEDIN_URL} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={`btn btnSecondary ${styles.secondaryCta}`}
+                >
+                    <LinkedinIcon size={16} />
+                    <span>LinkedIn</span>
                 </a>
                 <a 
                     href={REPO_BASE_URL} 
@@ -31,22 +42,22 @@ export const Hero: React.FC = () => {
                     className={`btn btnSecondary ${styles.secondaryCta}`}
                 >
                     <GithubIcon size={16} />
-                    <span>View Repository</span>
+                    <span>Repository</span>
                 </a>
             </div>
 
             <div className={styles.metaRow}>
                 <span className={styles.metaItem}>
                     <LayersIcon size={15} className={styles.metaIcon} />
-                    <span>3 Featured Apps</span>
+                    <span>6 Featured Projects</span>
                 </span>
                 <span className={styles.metaItem}>
                     <CodeBracketIcon size={15} className={styles.metaIcon} />
-                    <span>React 19 & TypeScript</span>
+                    <span>Enterprise, AI & Web</span>
                 </span>
                 <span className={styles.metaItem}>
                     <TerminalIcon size={15} className={styles.metaIcon} />
-                    <span>GitHub Actions CI/CD</span>
+                    <span>LabES - UFES Apprentice</span>
                 </span>
             </div>
         </section>

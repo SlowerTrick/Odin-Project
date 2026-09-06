@@ -1,37 +1,41 @@
-# WebDev: Web Development Learning Journey
+# WebDev: Portfolio & Engineering Journey
 
-Comprehensive repository documenting the progression through frontend engineering, full-stack principles, computer science foundations, and modern application architecture by [Artur Vítor](https://github.com/Artur-SLO).
+Comprehensive repository documenting the progression through software engineering, enterprise backend systems, artificial intelligence (RAG), and modern frontend architecture by **[Artur Vítor](https://github.com/Artur-SLO)**, Computer Science undergraduate at **Universidade Federal do Espírito Santo (UFES)** and Web Developer apprentice at **LabES - UFES**.
 
-The live portfolio hub and interactive applications are continuously built and deployed to GitHub Pages at:  
-**[https://artur-slo.github.io/WebDev/](https://artur-slo.github.io/WebDev/)**
-
----
-
-## Curriculum Overview
-
-This repository captures an end-to-end learning path spanning six core competencies:
-
-1. **HTML5 & CSS3 Architecture:** Semantic markup, CSS Grid, Flexbox, responsive layouts, and accessibility standards.
-2. **JavaScript & Algorithms:** ES6+ modules, asynchronous workflows, DOM manipulation, and core data structures (Binary Search Trees, Linked Lists, HashMaps, graph traversal).
-3. **Build Tooling & Bundlers:** Webpack asset pipelines, modern Vite tooling, npm dependency management, and configuration.
-4. **Test-Driven Development (TDD):** Automated unit testing, edge case verification, and test-first methodology using Jest and Vitest.
-5. **Modern React & TypeScript:** React 19 component architecture, custom hooks, context state management, SPA routing, and typed interfaces.
-6. **Automated CI/CD:** GitHub Actions workflows for multi-project caching, parallel builds, artifact consolidation, and automated static deployment.
+- **Live Portfolio Hub:** [https://artur-slo.github.io/WebDev/](https://artur-slo.github.io/WebDev/)
+- **LinkedIn:** [https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/](https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/)
+- **GitHub:** [https://github.com/Artur-SLO](https://github.com/Artur-SLO)
 
 ---
 
-## Featured Applications (React & TypeScript)
+## Featured Systems & Engineering Projects
+
+Key production-grade and research systems demonstrating backend architecture, AI pipelines, computer vision, and full-stack development:
+
+| Project | Description | Core Stack | Reference |
+| :--- | :--- | :--- | :--- |
+| **Marvin (LabES - UFES)** | University web management system for academic, teaching, and research activities, developed as an apprentice at LabES - UFES. | Java, Jakarta EE, WildFly, PostgreSQL, MinIO (S3), Docker, Maven | [LabES GitLab](https://gitlab.labes.inf.ufes.br/marvin/marvin) |
+| **Studex** | Gamified AI study platform that converts PDFs into automated summaries, flashcards, and mind maps using hybrid RAG and local LLMs. | Python, Flask, Qdrant, Ollama (Llama 3.2, Qwen), PyMuPDF, React, Docker | [GitHub Repo](https://github.com/lewislf/studex) |
+| **Face Recognition Web App** | Real-time biometric face recognition system with full-duplex video streaming via WebSockets, dlib embeddings, and LGPD compliance. | Python, Flask, OpenCV, WebSockets, dlib, React, Vite | [GitHub Repo](https://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main) |
+| **Deltasong** | Full-stack audio recognition, trivia, and deduction game with millisecond snippet slicing and real-time cloud leaderboards. | React 19, Firebase, Mantine UI, React Router, Python | [GitHub Repo](https://github.com/Artur-SLO/Deltasong) |
+
+---
+
+## Interactive Web Applications (React & TypeScript)
+
+Frontend applications built and hosted directly from this repository on GitHub Pages:
 
 | Application | Description | Core Stack | Live Preview | Source Code |
 | :--- | :--- | :--- | :--- | :--- |
-| **Portfolio Hub** | Central landing page showcasing projects, live GitHub contribution graph, and competencies. | React 19, TypeScript, Vite, CSS Modules | [Live Demo](https://artur-slo.github.io/WebDev/) | [Source](https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/Hub) |
+| **Portfolio Hub** | Central showcase with dynamic project cards, live GitHub contribution calendar, and technical competencies. | React 19, TypeScript, Vite, CSS Modules | [Live Demo](https://artur-slo.github.io/WebDev/) | [Source](https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/Hub) |
 | **Shopping Cart** | Full e-commerce platform with real-time cart state, dynamic catalog, and Vitest test suite. | React 19, React Router, Vitest, FakeStore API | [Live Demo](https://artur-slo.github.io/WebDev/Shopping-Cart/) | [Source](https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/Shopping-Cart) |
-| **CV Application** | Interactive curriculum vitae generator with step-by-step wizard, live edit mode, and print engine. | React 19, Vite, Web Print API, CSS | [Live Demo](https://artur-slo.github.io/WebDev/CV-Application/) | [Source](https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/CV%20Application) |
+| **CV Application** | Interactive curriculum vitae generator with step-by-step wizard, live edit mode, and clean print export. | React 19, Vite, Web Print API, CSS | [Live Demo](https://artur-slo.github.io/WebDev/CV-Application/) | [Source](https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/CV%20Application) |
 | **Memory Card Game** | Memory challenge game with dynamic card shuffling and live score tracking powered by PokeAPI. | React 19, PokeAPI, Algorithms, CSS | [Live Demo](https://artur-slo.github.io/WebDev/Memory-Card/) | [Source](https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/Memory%20Card) |
+
 
 ---
 
-## JavaScript, Data Structures & Algorithms
+## JavaScript, Data Structures & Algorithmshttps://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main
 
 Practical implementations of classic computer science algorithms and interactive browser-based games:
 
@@ -126,4 +130,8 @@ npm run dev
 
 ## Author
 
-- **Artur Vítor** - [GitHub Profile](https://github.com/Artur-SLO)
+- **Artur Vítor**
+  - Computer Science undergraduate at Universidade Federal do Espírito Santo (UFES)
+  - Web Developer apprentice at LabES - UFES
+  - [LinkedIn Profile](https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/)
+  - [GitHub Profile](https://github.com/Artur-SLO)

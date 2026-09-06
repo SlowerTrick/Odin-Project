@@ -1,6 +1,6 @@
 import React from 'react';
-import { CodeBracketIcon, GithubIcon } from './Icons';
-import { REPO_BASE_URL } from '../data/projects';
+import { CodeBracketIcon, GithubIcon, LinkedinIcon } from './Icons';
+import { REPO_BASE_URL, LINKEDIN_URL } from '../data/projects';
 import styles from '../styles/Navbar.module.css';
 
 export const Navbar: React.FC = () => {
@@ -10,14 +10,25 @@ export const Navbar: React.FC = () => {
                 <a href="#hero" className={styles.brandLink}>
                     <CodeBracketIcon size={20} className={styles.brandIcon} />
                     <span>
-                        WebDev <span className={styles.brandAccent}>Portfolio</span>
+                        Artur Vítor <span className={styles.brandAccent}>Portfolio</span>
                     </span>
                 </a>
 
                 <nav className={styles.navLinks} aria-label="Main Navigation">
+                    <a href="#experience" className={styles.navLink}>Experience</a>
                     <a href="#projects" className={styles.navLink}>Projects</a>
                     <a href="#activity" className={styles.navLink}>GitHub Activity</a>
                     <a href="#competencies" className={styles.navLink}>Competencies</a>
+                    <a 
+                        href={LINKEDIN_URL} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className={styles.navLink}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+                    >
+                        <LinkedinIcon size={14} />
+                        <span>LinkedIn</span>
+                    </a>
                     <a 
                         href={REPO_BASE_URL} 
                         target="_blank" 

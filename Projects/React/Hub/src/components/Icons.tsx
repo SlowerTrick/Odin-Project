@@ -19,6 +19,14 @@ export const GithubIcon: React.FC<IconProps> = ({ className = '', size = 16 }) =
     </svg>
 );
 
+export const LinkedinIcon: React.FC<IconProps> = ({ className = '', size = 16 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+    </svg>
+);
+
 export const CodeBracketIcon: React.FC<IconProps> = ({ className = '', size = 16 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <polyline points="16 18 22 12 16 6" />
@@ -54,6 +62,15 @@ export const GamepadIcon: React.FC<IconProps> = ({ className = '', size = 16 }) 
     </svg>
 );
 
+export const MusicIcon: React.FC<IconProps> = ({ className = '', size = 16 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+    </svg>
+);
+
+
 export const ArrowRightIcon: React.FC<IconProps> = ({ className = '', size = 16 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <line x1="5" y1="12" x2="19" y2="12" />
@@ -80,5 +97,19 @@ export const TerminalIcon: React.FC<IconProps> = ({ className = '', size = 16 })
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <polyline points="4 17 10 11 4 5" />
         <line x1="12" y1="19" x2="20" y2="19" />
+    </svg>
+);
+
+export const BriefcaseIcon: React.FC<IconProps> = ({ className = '', size = 16 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+    </svg>
+);
+
+export const AcademicCapIcon: React.FC<IconProps> = ({ className = '', size = 16 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+        <path d="M6 12v5c3 3 9 3 12 0v-5" />
     </svg>
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Project } from '../types';
-import { ExternalLinkIcon, GithubIcon, CartIcon, DocumentIcon, GamepadIcon, CheckCircleIcon } from './Icons';
+import { ExternalLinkIcon, GithubIcon, CartIcon, DocumentIcon, GamepadIcon, MusicIcon, CheckCircleIcon } from './Icons';
 import styles from '../styles/Projects.module.css';
 
 interface ProjectCardProps {
@@ -9,7 +9,9 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const baseUrl = import.meta.env.BASE_URL;
-    const fullDemoUrl = `${baseUrl}${project.demoPath}`;
+    const demoUrl = project.isExternal 
+        ? (project.externalUrl || project.repoPath) 
+        : `${baseUrl}${project.demoPath}`;
 
     const renderIcon = () => {
         switch (project.iconType) {
@@ -19,6 +21,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 return <DocumentIcon size={22} />;
             case 'game':
                 return <GamepadIcon size={22} />;
+            case 'music':
+                return <MusicIcon size={22} />;
             default:
                 return <DocumentIcon size={22} />;
         }
@@ -60,11 +64,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
             <div className={styles.cardActions}>
                 <a
-                    href={fullDemoUrl}
+                    href={demoUrl}
+                    target={project.isExternal ? '_blank' : undefined}
+                    rel={project.isExternal ? 'noopener noreferrer' : undefined}
                     className={`btn btnPrimary ${styles.btnDemo}`}
-                    title={`Launch ${project.title} live demo`}
+                    title={`Explore ${project.title}`}
                 >
-                    <span>Open Application</span>
+                    <span>{project.isExternal ? 'Explore Project' : 'Open Application'}</span>
                     <ExternalLinkIcon size={15} />
                 </a>
                 <a
