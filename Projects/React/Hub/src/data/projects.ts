@@ -7,24 +7,25 @@ export const MARVIN_REPO_URL = 'https://gitlab.labes.inf.ufes.br/marvin/marvin';
 export const STUDEX_REPO_URL = 'https://github.com/lewislf/studex';
 export const FACE_RECOG_REPO_URL = 'https://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main';
 export const DELTASONG_REPO_URL = 'https://github.com/Artur-SLO/Deltasong';
+export const DELTASONG_LIVE_URL = 'https://artur-slo.github.io/Deltasong/';
 
 export const USER_PROFILE = {
     name: 'Artur Vítor',
-    role: 'Computer Science Undergraduate @ UFES · Web Developer @ LabES',
-    headline: 'Computer Science Undergraduate & Full-Stack / Backend Developer',
+    role: 'Computer Science Undergraduate @ UFES · Software Engineering Intern @ LabES',
+    headline: 'Computer Science Undergraduate & Software Developer',
     location: 'Vitória, Espírito Santo, Brazil',
     linkedin: LINKEDIN_URL,
     github: GITHUB_PROFILE_URL,
-    summary: 'Computer Science undergraduate student at Universidade Federal do Espírito Santo (UFES) and Web Developer apprentice at the Software Engineering Laboratory (LabES - UFES). Practical experience building large-scale enterprise systems (Marvin in Java/Jakarta EE), AI platforms with RAG pipelines and local LLMs (Studex), real-time biometric systems with LGPD compliance (Face Recognition), and modern responsive web applications.',
+    summary: 'Computer Science undergraduate student at Universidade Federal do Espírito Santo (UFES) and Software Engineering Intern at the Software Engineering Laboratory (LabES - UFES). Practical experience building enterprise systems (Marvin in Java/Jakarta EE), AI platforms with RAG pipelines and local LLMs (Studex), real-time biometric systems with LGPD compliance (Face Recognition), and modern responsive web applications.',
 };
 
 export const EXPERIENCES: ExperienceItem[] = [
     {
-        role: 'Web Developer (Apprentice)',
+        role: 'Software Engineering Intern',
         company: 'LabES - UFES',
         period: 'May 2026 – Present · 5 mos',
         location: 'Vitória, Espírito Santo, Brazil · On-site',
-        type: 'Apprentice',
+        type: 'Internship / Scholarship',
         description: 'Development and maintenance of Marvin, an enterprise university web management system for academic, research, and teaching workflows at UFES.',
         highlights: [
             'Enterprise architecture built with Java and Jakarta EE running on WildFly application server',
@@ -119,12 +120,12 @@ export const PROJECTS: Project[] = [
             'Audio data processing and track automation powered by Python scripts',
         ],
         tags: ['React 19', 'Firebase Firestore', 'Mantine UI', 'React Router', 'Python'],
-        demoPath: '',
+        demoPath: DELTASONG_LIVE_URL,
         repoPath: DELTASONG_REPO_URL,
         status: 'Live',
         iconType: 'music',
         isExternal: true,
-        externalUrl: DELTASONG_REPO_URL,
+        externalUrl: DELTASONG_LIVE_URL,
     },
     {
         id: 'shopping-cart',
@@ -162,23 +163,66 @@ export const PROJECTS: Project[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
-        title: 'Backend & Enterprise Systems',
-        description: 'Robust corporate architectures, application servers, relational databases, and APIs.',
-        skills: ['Java & Jakarta EE', 'WildFly Application Server', 'Python & Flask', 'PostgreSQL', 'MinIO (S3 API)', 'REST & WebSockets APIs'],
+        title: 'Enterprise Backend & Systems',
+        description: 'Production-grade enterprise architectures, application servers, relational modeling, and object storage.',
+        skills: [
+            'Java & Jakarta EE',
+            'WildFly Application Server',
+            'PostgreSQL & Schema Migrations',
+            'MinIO (AWS S3-compatible API)',
+            'Apache Maven Build Tooling',
+            'Python & Flask Microservices',
+            'WebSockets & REST APIs',
+        ],
     },
     {
-        title: 'Artificial Intelligence & Computer Vision',
-        description: 'Hybrid RAG pipelines, vector databases, local LLM orchestration, and computer vision.',
-        skills: ['Hybrid RAG (Vector + BM25)', 'Qdrant Vector DB', 'Ollama (Llama 3.2, Qwen)', 'OpenCV & dlib', 'PyMuPDF & Document Processing'],
+        title: 'AI, RAG & Computer Vision',
+        description: 'Retrieval-Augmented Generation pipelines, vector databases, local LLM orchestration, and real-time biometrics.',
+        skills: [
+            'Hybrid RAG (Vector + BM25 Lexical)',
+            'Qdrant Vector Database',
+            'Ollama (Llama 3.2, Qwen, Phi-3.5)',
+            'PyMuPDF Document Extraction',
+            'OpenCV & dlib Biometric Embeddings',
+            'Full-Duplex Frame Streaming',
+            'LGPD Compliance & Data Privacy',
+        ],
     },
     {
         title: 'Modern Frontend Engineering',
-        description: 'Component architecture, static typing, reactive state management, and modern tooling.',
-        skills: ['React 19 & Custom Hooks', 'TypeScript', 'Mantine UI & CSS Modules', 'React Router SPA', 'Vite Bundler', 'HTML5 Canvas & Web APIs'],
+        description: 'Component-driven reactive architectures, static typing, state management, and rich interactive media.',
+        skills: [
+            'React 19 & Custom Hooks',
+            'TypeScript Interfaces & Generics',
+            'Mantine UI v9 & CSS Modules',
+            'React Router SPA Architecture',
+            'Firebase Firestore & Cloud Auth',
+            'HTML5 Canvas & Web Audio API',
+            'Responsive UI & Accessibility',
+        ],
     },
     {
         title: 'DevOps & Quality Assurance',
-        description: 'Containerization, automated CI/CD pipelines, and software testing methodologies.',
-        skills: ['Docker & Docker Compose', 'Git & GitHub Workflows', 'Vitest & PyTest', 'TDD (Test-Driven Development)', 'GitHub Actions CI/CD'],
+        description: 'Containerization, automated continuous delivery, software test automation, and developer workflows.',
+        skills: [
+            'Docker & Docker Compose',
+            'GitHub Actions CI/CD Workflows',
+            'Vitest & Jest Unit Testing',
+            'PyTest Python Testing Suite',
+            'Test-Driven Development (TDD)',
+            'Git, GitHub & GitLab Collaboration',
+            'Vite Engine & Modern Toolchains',
+        ],
+    },
+    {
+        title: 'Computer Science Foundations',
+        description: 'Rigorous theoretical foundations in core data structures, graph algorithms, and clean software architecture.',
+        skills: [
+            'Data Structures (Trees, Graphs, HashMaps)',
+            'Algorithms (BFS, DFS, Dijkstra, Sorting)',
+            'Asymptotic Complexity (Big-O Analysis)',
+            'Object-Oriented Analysis & Design',
+            'Modular Systems & Clean Architecture',
+        ],
     },
 ];

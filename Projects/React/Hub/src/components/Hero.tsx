@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
         <section id="hero" className={styles.heroSection}>
             <div className={styles.heroBadge}>
                 <span className={styles.badgePulse}></span>
-                <span>Computer Science @ UFES · Web Developer @ LabES</span>
+                <span>Computer Science @ UFES · Software Engineering Intern @ LabES</span>
             </div>
 
             <h1 className={styles.heroTitle}>
@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             <p className={styles.heroSubtitle}>
-                Computer Science undergraduate at UFES and Web Developer apprentice at LabES. 
+                Computer Science undergraduate at UFES and Software Engineering Intern at LabES. 
                 Experienced in enterprise systems (Marvin with Java and Jakarta EE), AI study platforms 
                 (Studex with RAG and local LLMs), computer vision (Face Recognition with WebSockets), 
                 and modern interactive web applications.
@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
                 </span>
                 <span className={styles.metaItem}>
                     <TerminalIcon size={15} className={styles.metaIcon} />
-                    <span>LabES - UFES Apprentice</span>
+                    <span>LabES - UFES Intern</span>
                 </span>
             </div>
         </section>

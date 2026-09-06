@@ -1,6 +1,6 @@
 # WebDev: Portfolio & Engineering Journey
 
-Comprehensive repository documenting the progression through software engineering, enterprise backend systems, artificial intelligence (RAG), and modern frontend architecture by **[Artur Vítor](https://github.com/Artur-SLO)**, Computer Science undergraduate at **Universidade Federal do Espírito Santo (UFES)** and Web Developer apprentice at **LabES - UFES**.
+Comprehensive repository documenting the progression through software engineering, enterprise backend systems, artificial intelligence (RAG), and modern frontend architecture by **[Artur Vítor](https://github.com/Artur-SLO)**, Computer Science undergraduate at **Universidade Federal do Espírito Santo (UFES)** and Software Engineering Intern at **LabES - UFES**.
 
 - **Live Portfolio Hub:** [https://artur-slo.github.io/WebDev/](https://artur-slo.github.io/WebDev/)
 - **LinkedIn:** [https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/](https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/)
@@ -14,10 +14,10 @@ Key production-grade and research systems demonstrating backend architecture, AI
 
 | Project | Description | Core Stack | Reference |
 | :--- | :--- | :--- | :--- |
-| **Marvin (LabES - UFES)** | University web management system for academic, teaching, and research activities, developed as an apprentice at LabES - UFES. | Java, Jakarta EE, WildFly, PostgreSQL, MinIO (S3), Docker, Maven | [LabES GitLab](https://gitlab.labes.inf.ufes.br/marvin/marvin) |
+| **Marvin (LabES - UFES)** | University web management system for academic, teaching, and research activities, developed as a Software Engineering Intern at LabES - UFES. | Java, Jakarta EE, WildFly, PostgreSQL, MinIO (S3), Docker, Maven | [LabES GitLab](https://gitlab.labes.inf.ufes.br/marvin/marvin) |
 | **Studex** | Gamified AI study platform that converts PDFs into automated summaries, flashcards, and mind maps using hybrid RAG and local LLMs. | Python, Flask, Qdrant, Ollama (Llama 3.2, Qwen), PyMuPDF, React, Docker | [GitHub Repo](https://github.com/lewislf/studex) |
 | **Face Recognition Web App** | Real-time biometric face recognition system with full-duplex video streaming via WebSockets, dlib embeddings, and LGPD compliance. | Python, Flask, OpenCV, WebSockets, dlib, React, Vite | [GitHub Repo](https://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main) |
-| **Deltasong** | Full-stack audio recognition, trivia, and deduction game with millisecond snippet slicing and real-time cloud leaderboards. | React 19, Firebase, Mantine UI, React Router, Python | [GitHub Repo](https://github.com/Artur-SLO/Deltasong) |
+| **Deltasong** | Full-stack audio recognition, trivia, and deduction game with millisecond snippet slicing and real-time cloud leaderboards. | React 19, Firebase, Mantine UI, React Router, Python | [Live App](https://artur-slo.github.io/Deltasong/) · [GitHub Repo](https://github.com/Artur-SLO/Deltasong) |
 
 ---
 
@@ -35,7 +35,7 @@ Frontend applications built and hosted directly from this repository on GitHub P
 
 ---
 
-## JavaScript, Data Structures & Algorithmshttps://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main
+## JavaScript, Data Structures & Algorithms
 
 Practical implementations of classic computer science algorithms and interactive browser-based games:
 
@@ -132,6 +132,6 @@ npm run dev
 
 - **Artur Vítor**
   - Computer Science undergraduate at Universidade Federal do Espírito Santo (UFES)
-  - Web Developer apprentice at LabES - UFES
+  - Software Engineering Intern at LabES - UFES
   - [LinkedIn Profile](https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/)
   - [GitHub Profile](https://github.com/Artur-SLO)
