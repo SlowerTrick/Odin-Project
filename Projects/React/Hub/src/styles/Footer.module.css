@@ -1,0 +1,158 @@
+.footer {
+    width: 100%;
+    background-color: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border-primary);
+    margin-top: 5rem;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-accent-primary) 50%, transparent 100%);
+}
+
+.footerMain {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 3.5rem 1.75rem 2.5rem 1.75rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr;
+    gap: 3rem;
+}
+
+@media (max-width: 900px) {
+    .footerMain {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.brandCol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    max-width: 440px;
+}
+
+.brandHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.brandIcon {
+    color: var(--color-accent-primary);
+}
+
+.brandText {
+    font-size: 0.925rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.navCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.colHeading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-primary);
+}
+
+.navLinksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footerNavLink {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: var(--transition-colors);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.footerNavLink:hover {
+    color: var(--color-accent-primary);
+}
+
+.stackCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stackBadges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stackBadge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-small);
+}
+
+.footerBottom {
+    border-top: 1px solid var(--color-border-primary);
+    padding: 1.5rem 1.75rem;
+    background-color: rgba(9, 13, 22, 0.4);
+}
+
+.bottomContainer {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyrightText {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.bottomLink {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: var(--transition-colors);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.bottomLink:hover {
+    color: var(--color-accent-primary);
+}
