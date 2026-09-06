@@ -1,0 +1,149 @@
+.githubSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profileCard {
+    background-color: var(--color-bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-xl);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-standard);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profileTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--color-border-primary);
+    padding-bottom: 1.5rem;
+}
+
+.authorGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent-primary);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+    background-color: var(--color-bg-primary);
+}
+
+.authorMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.authorName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.authorHandle {
+    font-size: 0.875rem;
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.authorHandle:hover {
+    text-decoration: underline;
+}
+
+.repoStatsRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.statPill {
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background-color: var(--color-bg-inner);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-small);
+    padding: 0.5rem 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.repoActionBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-inner);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-small);
+    text-decoration: none;
+    transition: var(--transition-standard);
+}
+
+.repoActionBtn:hover {
+    border-color: var(--color-border-hover);
+    color: var(--color-accent-primary);
+    transform: var(--lift-subtle);
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.calendarTitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.calendarSubtitle {
+    font-size: 0.825rem;
+    color: var(--color-text-muted);
+}
+
+.calendarWrapper {
+    background-color: var(--color-bg-inner);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-normal);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+/* Ensure react-github-calendar text and boxes look crisp */
+.calendarWrapper svg {
+    max-width: 100%;
+}

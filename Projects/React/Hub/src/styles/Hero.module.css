@@ -1,0 +1,98 @@
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4.5rem 2.5rem;
+    background-color: var(--color-bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-standard);
+    gap: 1.75rem;
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    color: var(--color-accent-primary);
+    font-size: 0.825rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+}
+
+.badgePulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent-primary);
+    box-shadow: 0 0 8px var(--color-accent-primary);
+}
+
+.heroTitle {
+    font-size: clamp(2.3rem, 5vw, 3.25rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+.heroTitleAccent {
+    background: var(--color-accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 680px;
+    line-height: 1.65;
+}
+
+.heroActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.primaryCta {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.95rem;
+}
+
+.secondaryCta {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.95rem;
+}
+
+.metaRow {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.metaItem {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    background-color: var(--color-bg-inner);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-normal);
+    padding: 0.5rem 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.metaIcon {
+    color: var(--color-accent-primary);
+}

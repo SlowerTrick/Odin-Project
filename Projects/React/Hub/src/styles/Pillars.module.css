@@ -1,0 +1,73 @@
+.pillarsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+}
+
+@media (max-width: 1024px) {
+    .pillarsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pillarsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pillarCard {
+    background-color: var(--color-bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-large);
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: var(--shadow-standard);
+    transition: var(--transition-standard);
+}
+
+.pillarCard:hover {
+    background-color: var(--color-bg-card-hover);
+    border-color: var(--color-border-hover);
+    transform: var(--lift-subtle);
+    box-shadow: var(--shadow-hover);
+}
+
+.pillarTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.01em;
+}
+
+.pillarText {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+}
+
+.skillList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-top: 1px solid var(--color-border-primary);
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.skillItem {
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-inner);
+    padding: 0.45rem 0.75rem;
+    border-radius: var(--radius-small);
+    border: 1px solid var(--color-border-primary);
+}
