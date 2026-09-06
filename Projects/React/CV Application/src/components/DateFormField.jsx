@@ -1,36 +1,16 @@
-export default function DateFormField({ label, name, type = "text", value, onChange, placeholder }) {
-    const fieldStyle = {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "-1rem",
-        textAlign: "center",
-        width: "100%",
-        maxWidth: "300px",
-    };
-
+export default function DateFormField({ label, name, value, onChange, placeholder }) {
     return (
-        <div className="input-field" style={fieldStyle}>
-            <label htmlFor={name} style={{ marginBottom: "5px" }}>
+        <div className="input-field date-field">
+            <label htmlFor={name} className="field-label">
                 {label}
             </label>
             <input
                 id={name}
-                type={type}
+                type="date"
                 name={name}
                 placeholder={placeholder || label}
-                value={value}
+                value={value || ''}
                 onChange={onChange}
-                onFocus={(e) => {
-                    if (type === "text") e.target.type = "date";
-                }}
-                onBlur={(e) => {
-                    if (!e.target.value && type === "text") {
-                        e.target.type = "text";
-                    }
-                }}
-                style={{ width: "100%" }}
             />
         </div>
     );
