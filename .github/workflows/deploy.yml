@@ -38,24 +38,30 @@ jobs:
           cache: 'npm'
           cache-dependency-path: |
             Projects/React/CV Application/package-lock.json
+            Projects/React/Hub/package-lock.json
             Projects/React/Memory Card/package-lock.json
             Projects/React/Shopping-Cart/package-lock.json
 
       - name: Install dependencies
         run: |
-          for dir in "CV Application" "Memory Card" "Shopping-Cart"; do
+          for dir in "CV Application" "Hub" "Memory Card" "Shopping-Cart"; do
             (cd "Projects/React/$dir" && npm ci)
           done
 
       - name: Build
         run: |
-          for dir in "CV Application" "Memory Card" "Shopping-Cart"; do
+          for dir in "CV Application" "Hub" "Memory Card" "Shopping-Cart"; do
             (cd "Projects/React/$dir" && npm run build)
           done
 
       - name: Consolidate dist
         run: |
           mkdir -p public-dist
+
+          # Deploy Hub as the root portfolio landing page
+          cp -r "Projects/React/Hub/dist/." public-dist/
+
+          # Deploy sub-project builds into dedicated route directories
           cp -r "Projects/React/CV Application/dist" public-dist/CV-Application
           cp -r "Projects/React/Memory Card/dist" public-dist/Memory-Card
           cp -r "Projects/React/Shopping-Cart/dist" public-dist/Shopping-Cart
@@ -67,8 +73,6 @@ jobs:
           cp -r "Projects/React/CV Application/dist" "public-dist/CV Application"
           cp -r "Projects/React/Memory Card/dist" "public-dist/Memory Card"
 
-          # Simple root landing page
-          echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>WebDev Portfolio</title><meta http-equiv="refresh" content="0; url=Shopping-Cart/"></head><body><p>Redirecting to <a href="Shopping-Cart/">Shopping-Cart</a>. Also check <a href="CV-Application/">CV Application</a> and <a href="Memory-Card/">Memory Card</a>.</p></body></html>' > public-dist/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
