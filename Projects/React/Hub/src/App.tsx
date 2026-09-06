@@ -2,6 +2,7 @@ import React from 'react';
 import { PageWrapper } from './components/PageWrapper';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { GithubActivitySection } from './components/GithubActivitySection';
 import { PillarsSection } from './components/PillarsSection';
@@ -14,6 +15,7 @@ export const App: React.FC = () => {
             <Navbar />
             <main className={commonStyles.homeContainer}>
                 <Hero />
+                <ExperienceSection />
                 <ProjectsSection />
                 <GithubActivitySection />
                 <PillarsSection />
