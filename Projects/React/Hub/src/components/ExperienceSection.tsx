@@ -22,11 +22,11 @@ export const ExperienceSection: React.FC = () => {
     return (
         <section id="experience" className={styles.experienceSection}>
             <div className={commonStyles.sectionHeader}>
-                <span className={commonStyles.sectionEyebrow}>Trajetória Profissional & Acadêmica</span>
-                <h2 className={commonStyles.sectionTitle}>Experiência & Formação</h2>
+                <span className={commonStyles.sectionEyebrow}>Career & Academic Journey</span>
+                <h2 className={commonStyles.sectionTitle}>Experience & Education</h2>
                 <p className={commonStyles.sectionSubtitle}>
-                    Atuação prática no desenvolvimento de sistemas corporativos em ambiente universitário, 
-                    pesquisa aplicada e sólida base teórica em Ciência da Computação.
+                    Hands-on engineering in enterprise university systems, applied research, 
+                    and rigorous theoretical foundations in Computer Science.
                 </p>
             </div>
 
@@ -76,7 +76,7 @@ export const ExperienceSection: React.FC = () => {
                                 className={styles.linkedInBtn}
                             >
                                 <ExternalLinkIcon size={16} />
-                                <span>Repositório Marvin (GitLab)</span>
+                                <span>Marvin Repository (GitLab)</span>
                             </a>
                             <a 
                                 href={LINKEDIN_URL} 
@@ -85,7 +85,7 @@ export const ExperienceSection: React.FC = () => {
                                 className={styles.linkedInBtn}
                             >
                                 <LinkedinIcon size={16} />
-                                <span>Perfil LinkedIn</span>
+                                <span>LinkedIn Profile</span>
                             </a>
                         </div>
                     </div>
@@ -121,20 +121,20 @@ export const ExperienceSection: React.FC = () => {
                         </ul>
 
                         <div className={styles.skillsContainer}>
-                            <span className={styles.skillTag}>Algoritmos & Complexidade</span>
-                            <span className={styles.skillTag}>Engenharia de Software</span>
-                            <span className={styles.skillTag}>Sistemas Distribuídos</span>
-                            <span className={styles.skillTag}>Inteligência Artificial</span>
+                            <span className={styles.skillTag}>Data Structures & Algorithms</span>
+                            <span className={styles.skillTag}>Software Engineering</span>
+                            <span className={styles.skillTag}>Distributed Systems</span>
+                            <span className={styles.skillTag}>Artificial Intelligence</span>
                         </div>
                     </div>
                 ))}
             </div>
 
-            {/* Recruiter Technical Spotlight */}
+            {/* Systems Architecture Spotlight */}
             <div className={styles.recruiterSpotlight}>
                 <div className={styles.spotlightHeader}>
                     <h4 className={styles.spotlightTitle}>
-                        Contexto de Engenharia para Recrutadores
+                        Core Systems & Engineering Highlights
                     </h4>
                     <a 
                         href={LINKEDIN_URL} 
@@ -143,7 +143,7 @@ export const ExperienceSection: React.FC = () => {
                         className={styles.linkedInBtn}
                     >
                         <LinkedinIcon size={14} />
-                        <span>Conectar no LinkedIn</span>
+                        <span>LinkedIn Network</span>
                     </a>
                 </div>
 
@@ -160,7 +160,7 @@ export const ExperienceSection: React.FC = () => {
                         </div>
                         <span className={styles.spotlightProjectTech}>Java · Jakarta EE · WildFly · MinIO</span>
                         <p className={styles.spotlightProjectDesc}>
-                            Sistema web corporativo universitário em produção para gestão de ensino e pesquisa, com persistência transacional PostgreSQL e S3 via MinIO.
+                            Production university management system for teaching and research with transactional PostgreSQL persistence and S3 object storage via MinIO.
                         </p>
                     </a>
 
@@ -176,7 +176,7 @@ export const ExperienceSection: React.FC = () => {
                         </div>
                         <span className={styles.spotlightProjectTech}>Python · Flask · Qdrant · Ollama</span>
                         <p className={styles.spotlightProjectDesc}>
-                            Plataforma de estudos com pipeline RAG híbrido (busca vetorial e BM25), extração de PDFs com PyMuPDF e inferência local com LLMs (Llama 3.2 e Qwen).
+                            AI study platform with hybrid RAG (vector + BM25 search), PyMuPDF document extraction, and local LLM inference (Llama 3.2 and Qwen).
                         </p>
                     </a>
 
@@ -192,7 +192,7 @@ export const ExperienceSection: React.FC = () => {
                         </div>
                         <span className={styles.spotlightProjectTech}>OpenCV · dlib · WebSockets · React</span>
                         <p className={styles.spotlightProjectDesc}>
-                            Sistema de biometria facial contínua via WebSockets full-duplex de baixa latência, extração de embeddings e conformidade legal com a LGPD.
+                            Continuous real-time facial biometrics streaming via full-duplex WebSockets with dlib embeddings and strict LGPD compliance.
                         </p>
                     </a>
 
@@ -208,7 +208,7 @@ export const ExperienceSection: React.FC = () => {
                         </div>
                         <span className={styles.spotlightProjectTech}>React 19 · Firebase · Mantine UI</span>
                         <p className={styles.spotlightProjectDesc}>
-                            Aplicação web interativa de áudio com recorte de som com precisão de milissegundos, autenticação e ranking em nuvem Firestore.
+                            Interactive full-stack audio game with millisecond snippet slicing, Firebase Firestore authentication, and real-time leaderboards.
                         </p>
                     </a>
                 </div>
