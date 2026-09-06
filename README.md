@@ -7,8 +7,9 @@ Repository whose main objective is to store all my knowledge obtained thanks to 
 
 | Project | Description | Code | Preview |
 |--------|------------|------|---------|
-| Memory Card | Memory game with dynamic state management | [Src](https://github.com/Artur-SLO/Memory-Card) | [Live](https://memory-card-project-silk.vercel.app/) |
-| CV Application | Resume builder using React | [Src](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/CV%20Application) | [Live](https://cv-application-seven-lyart.vercel.app/) |
+| Memory Card | Memory game with dynamic state management | [Src](https://github.com/Artur-SLO/Memory-Card) | [Live](https://artur-slo.github.io/WebDev/Memory-Card/) |
+| CV Application | Resume builder using React | [Src](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/CV%20Application) | [Live](https://artur-slo.github.io/WebDev/CV-Application/) |
+| Shopping-Cart | E-commerce shopping cart with routing and state management | [Src](https://github.com/Artur-SLO/Odin-Project/tree/main/Projects/React/Shopping-Cart) | [Live](https://artur-slo.github.io/WebDev/Shopping-Cart/) |
 
 ---
 
